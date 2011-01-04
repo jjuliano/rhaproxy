@@ -15,18 +15,18 @@ Usage:
       global.maxconn = 256
 
       defaults = RhaproxyDefaults.new
-      defaults.mode = "http"
-      defaults.timeout_connect = "5000ms"
-      defaults.timeout_client = "50000ms"
-      defaults.timeout_server = "50000ms"
+      defaults.mode("http")
+      defaults.timeout_connect("5000ms")
+      defaults.timeout_client("50000ms")
+      defaults.timeout_server("50000ms")
 
       frontend = RhaproxyFrontend.new
-      frontend.name = "http-in"
-      frontend.default_backend = "servers"
+      frontend.name("http-in")
+      frontend.default_backend("servers")
 
       backend = RhaproxyBackend.new
-      backend.name = "servers"
-      backend.server = "server1 127.0.0.1:8000 maxconn 32"
+      backend.name("servers")
+      backend.server("server1 127.0.0.1:8000 maxconn 32")
 
       config = Array.new
       config.push([global.config])
