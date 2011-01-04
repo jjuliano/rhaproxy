@@ -1,0 +1,41 @@
+commit a33c94ce4018a3122bc0c88038fb4816b0cbe9b8
+Author: Joel Bryan Juliano <jjuliano@clinic-it.com>
+Date:   Tue Jan 4 23:53:08 2011 +0800
+
+    Changed README with the new syntax
+
+commit e550f727712f1a4356964a43301f84ccd451344f
+Author: Joel Bryan Juliano <jjuliano@clinic-it.com>
+Date:   Tue Jan 4 23:52:34 2011 +0800
+
+    bump to version 0.1.1 with new files added to gemspec
+
+commit 9ce4bf2e2ddf425de8295f96349240d8b8ced34c
+Author: Joel Bryan Juliano <jjuliano@clinic-it.com>
+Date:   Tue Jan 4 23:51:45 2011 +0800
+
+    reflect the new changes to the loader
+
+commit 158894bc703a3b5ac664f3e34ff0134606ea3f3e
+Author: Joel Bryan Juliano <jjuliano@clinic-it.com>
+Date:   Tue Jan 4 23:49:19 2011 +0800
+
+    Use the new mixin methods for the proxy classes
+
+commit aabec8bcdd33bb9c8829760731fc74cfd62618e0
+Author: Joel Bryan Juliano <jjuliano@clinic-it.com>
+Date:   Tue Jan 4 23:48:04 2011 +0800
+
+    Added the mixins class method
+
+commit 276a056586ebcd40c2b2761775d3f03c5988ea7e
+Author: Joel Bryan Juliano <jjuliano@clinic-it.com>
+Date:   Tue Jan 4 23:47:36 2011 +0800
+
+    Created a RhaproxyKeywords module to just mixins to each proxy class
+
+commit 6ca740c1ff0a8db1b689572d02051ee7f0136d5b
+Author: Joel Bryan Juliano <jjuliano@clinic-it.com>
+Date:   Thu Dec 30 17:47:43 2010 +0800
+
+    initial commit
