@@ -1,3 +1,21 @@
+commit f9ccd9edbabb7e9c4b17ee8094e7c1f38dc43dc6
+Author: Joel Bryan Juliano <jjuliano@clinic-it.com>
+Date:   Wed Jan 5 15:53:10 2011 +0800
+
+    bump gem version 0.1.2 with new changes
+
+commit 90acd37e5d95b4210cacaa963586a7f86e4d27e4
+Author: Joel Bryan Juliano <jjuliano@clinic-it.com>
+Date:   Wed Jan 5 15:51:40 2011 +0800
+
+    Stop sorting the haproxy configs! stop the madness! fixed.
+
+commit f1eeccdcd41fe2a256448bc08cdbc6e1b2969584
+Author: Joel Bryan Juliano <jjuliano@clinic-it.com>
+Date:   Tue Jan 4 23:53:42 2011 +0800
+
+    append the changelog
+
 commit a33c94ce4018a3122bc0c88038fb4816b0cbe9b8
 Author: Joel Bryan Juliano <jjuliano@clinic-it.com>
 Date:   Tue Jan 4 23:53:08 2011 +0800
