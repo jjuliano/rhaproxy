@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name = %q{rhaproxy}
-  s.version = "0.1.1"
-  s.date = %q{2011-01-04}
+  s.version = "0.1.2"
+  s.date = %q{2011-01-05}
   s.authors = ["Joel Bryan Juliano"]
   s.email = %q{joelbryan.juliano@gmail.com}
-  s.summary = %q{A gem providing a ruby interface to HAproxy TCP/HTTP Load Balancer.}
+  s.summary = %q{A HAproxy TCP/HTTP Load Balancer gem for Ruby.}
   s.homepage = %q{http://github.com/jjuliano/rhaproxy}
   s.description = %q{A gem providing a ruby interface to HAproxy TCP/HTTP Load Balancer.}
   s.files = [ "README", "Changelog", "MIT-LICENSE", "setup.rb",
