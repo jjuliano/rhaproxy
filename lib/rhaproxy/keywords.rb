@@ -30,7 +30,7 @@
     #
     def acl(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "acl " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "acl " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -197,7 +197,7 @@
     #
     def bind(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "bind " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "bind " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -227,7 +227,7 @@
     #
     def block(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "block " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "block " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -275,7 +275,7 @@
     #
     def capture_cookie(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "capture cookie " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "capture cookie " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -328,7 +328,7 @@
     #
     def capture_request_header(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "capture request header " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "capture request header " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -374,7 +374,7 @@
     #
     def capture_response_header(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "capture response header " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "capture response header " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -412,7 +412,7 @@
     #
     def force_persist(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "force-persist " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "force-persist " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -457,7 +457,7 @@
     #
     def http_request(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "http-request " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "http-request " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -476,7 +476,7 @@
     #
     def persistent_id(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "id " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "id " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -509,7 +509,7 @@
     #
     def ignore_persist(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "ignore persist " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "ignore persist " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -554,7 +554,7 @@
     #
     def monitor_fail(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "monitor fail " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "monitor fail " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -587,7 +587,7 @@
     #
     def option_ignore_persist(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option ignore-persist " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option ignore-persist " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -675,7 +675,7 @@
     #
     def redirect(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "redirect " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "redirect " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -711,7 +711,7 @@
     #
     def reqadd(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqadd " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqadd " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -755,7 +755,7 @@
     #
     def reqallow(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqallow " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqallow " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -764,7 +764,7 @@
 
     def reqiallow(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqiallow " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqiallow " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -807,7 +807,7 @@
     #
     def reqdel(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqdel " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqdel " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -816,7 +816,7 @@
 
     def reqidel(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqidel " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqidel " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -864,7 +864,7 @@
     #
     def reqdeny(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqdeny " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqdeny " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -873,7 +873,7 @@
 
     def reqideny(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqideny " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqideny " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -917,7 +917,7 @@
     #
     def reqpass(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqpass " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqpass " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -926,7 +926,7 @@
 
     def reqipass(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqipass " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqipass " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -977,7 +977,7 @@
     #
     def reqrep(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqrep " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqrep " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -986,7 +986,7 @@
 
     def reqirep(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqirep " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqirep " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1040,7 +1040,7 @@
     #
     def reqtarpit(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqtarpit " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqtarpit " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1049,7 +1049,7 @@
 
     def reqitarpit(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqitarpit " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqitarpit " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1081,7 +1081,7 @@
     #
     def rspadd(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "rspadd " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "rspadd " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1124,7 +1124,7 @@
     #
     def rspdel(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "rspdel " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "rspdel " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1133,7 +1133,7 @@
 
     def rspidel(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "rspidel " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "rspidel " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1180,7 +1180,7 @@
     #
     def rspdeny(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "rspdeny " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "rspdeny " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1189,7 +1189,7 @@
 
     def rspideny(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "rspideny " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "rspideny " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1239,7 +1239,7 @@
     #
     def rspirep(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "rspirep " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "rspirep " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1248,7 +1248,7 @@
 
     def rsprep(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "rsprep " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "rsprep " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1358,7 +1358,7 @@
     #
     def tcp_request_connection(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "tcp-request connection " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "tcp-request connection " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1470,7 +1470,7 @@
     #
     def tcp_request_content(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "tcp-request content " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "tcp-request content " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1526,7 +1526,7 @@
     #
     def tcp_request_inspect_delay(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "tcp-request inspect-delay " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "tcp-request inspect-delay " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1573,7 +1573,7 @@
     #
     def use_backend(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "use_backend " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "use_backend " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1590,7 +1590,7 @@
     #
     def description(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "description " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "description " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1624,7 +1624,7 @@
     #
     def backlog(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "backlog " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "backlog " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1684,7 +1684,7 @@
     #
     def bind_process(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "bind-process " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "bind-process " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1714,7 +1714,7 @@
     #
     def default_backend(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "default_backend " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "default_backend " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1740,7 +1740,7 @@
     #
     def disabled
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "disabled " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "disabled " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1761,7 +1761,7 @@
     #
     def enabled
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "enabled " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "enabled " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1814,7 +1814,7 @@
     #
     def errorfile(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "errorfile " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "errorfile " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1852,7 +1852,7 @@
     #
     def errorloc(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "errorloc " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "errorloc " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1890,7 +1890,7 @@
     #
     def errorloc302(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "errorloc302 " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "errorloc302 " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1926,7 +1926,7 @@
     #
     def errorloc303(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "errorloc303 " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "errorloc303 " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -1954,7 +1954,7 @@
     #
     def grace(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "grace " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "grace " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2027,7 +2027,7 @@
     #
     def log(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "log " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "log " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2062,7 +2062,7 @@
     #
     def maxconn(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "maxconn " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "maxconn " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2105,7 +2105,7 @@
     #
     def mode(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "mode " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "mode " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2152,7 +2152,7 @@
     #
     def monitor_net(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "monitor-net " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "monitor-net " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2194,7 +2194,7 @@
     #
     def monitor_uri(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "monitor-uri " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "monitor-uri " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2236,7 +2236,7 @@
     #
     def option_accept_invalid_http_request
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option accept-invalid-http-request " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option accept-invalid-http-request " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2280,7 +2280,7 @@
     #
     def option_clitcpka
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option clitcpka " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option clitcpka " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2304,7 +2304,7 @@
     #
     def option_contstats
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option contstats " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option contstats " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2336,7 +2336,7 @@
     #
     def option_dontlog_normal
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option dontlog-normal " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option dontlog-normal " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2370,7 +2370,7 @@
     #
     def option_dontlognull
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option dontlognull " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option dontlognull " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2409,7 +2409,7 @@
     #
     def option_forceclose
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option forceclose " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option forceclose " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2478,7 +2478,7 @@
     #
     def option_forwardfor(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option forwardfor " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option forwardfor " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2530,7 +2530,7 @@
     #
     def option_http_pretend_keepalive
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option http-pretend-keepalive " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option http-pretend-keepalive " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2579,7 +2579,7 @@
     #
     def option_http_server_close
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option http-server-close " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option http-server-close " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2622,7 +2622,7 @@
     #
     def option_http_use_proxy_header
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option http-use-proxy-header " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option http-use-proxy-header " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2667,7 +2667,7 @@
     #
     def option_httpclose
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option httpclose " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option httpclose " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2705,7 +2705,7 @@
     #
     def option_httplog
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option httplog " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option httplog " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2746,7 +2746,7 @@
     #
     def option_http_proxy
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option http_proxy " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option http_proxy " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2788,7 +2788,7 @@
     #
     def option_independant_streams
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option independant-streams " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option independant-streams " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2820,7 +2820,7 @@
     #
     def option_log_separate_errors
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option log-separate-errors " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option log-separate-errors " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2863,7 +2863,7 @@
     #
     def option_logasap
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option logasap " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option logasap " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2904,7 +2904,7 @@
     #
     def option_nolinger
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option nolinger " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option nolinger " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2972,7 +2972,7 @@
     #
     def option_originalto(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option originalto " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option originalto " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -2991,7 +2991,7 @@
     #
     def option_socket_stats
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option socket-stats " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option socket-stats " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3038,7 +3038,7 @@
     #
     def option_splice_auto
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option splice-auto " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option splice-auto " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3073,7 +3073,7 @@
     #
     def option_splice_request
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option splice-request " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option splice-request " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3108,7 +3108,7 @@
     #
     def option_splice_response
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option splice-response " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option splice-response " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3152,7 +3152,7 @@
     #
     def option_tcp_smart_accept
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option tcp-smart-accept " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option tcp-smart-accept " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3197,7 +3197,7 @@
     #
     def option_tcpka
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option tcpka " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option tcpka " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3226,7 +3226,7 @@
     #
     def option_tcplog
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option tcplog " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option tcplog " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3268,7 +3268,7 @@
     #
     def rate_limit_sessions(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "rate-limit sessions " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "rate-limit sessions " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3313,7 +3313,7 @@
     #
     def timeout_client(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "timeout client " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "timeout client " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3363,7 +3363,7 @@
     #
     def timeout_http_keep_alive(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "timeout http-keep-alive " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "timeout http-keep-alive " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3409,7 +3409,7 @@
     #
     def timeout_http_request(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "timeout http-request " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "timeout http-request " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3440,7 +3440,7 @@
     #
     def timeout_tarpit(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "timeout tarpit " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "timeout tarpit " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3449,7 +3449,7 @@
 
     def reqisetbe(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqisetbe " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqisetbe " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3458,7 +3458,7 @@
 
     def reqsetbe(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "reqsetbe " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "reqsetbe " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3531,7 +3531,7 @@
     #
     def appsession(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "appsession " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "appsession " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3563,7 +3563,7 @@
     #
     def dispatch(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "dispatch " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "dispatch " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3654,7 +3654,7 @@
     #
     def http_check_expect(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "http-check expect " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "http-check expect " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3687,7 +3687,7 @@
     #
     def option_ignore_persist(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option ignore-persist " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option ignore-persist " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3732,7 +3732,7 @@
     #
     def server(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "server " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "server " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3762,7 +3762,7 @@
     #
     def stats_http_request(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stats http-request " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stats http-request " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3842,7 +3842,7 @@
     #
     def stick_match(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stick match " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stick match " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3891,7 +3891,7 @@
     #
     def stick_on(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stick on " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stick on " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -3980,7 +3980,7 @@
     #
     def stick_store_request(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stick store-request " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stick store-request " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -4198,7 +4198,7 @@
     #
     def stick_table(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stick table " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stick table " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -4295,7 +4295,7 @@
     #
     def stick_store_response(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stick store-response " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stick store-response " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -4354,7 +4354,7 @@
     #
     def tcp_response_content(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "tcp-response content " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "tcp-response content " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -4375,7 +4375,7 @@
     #
     def tcp_response_inspect_delay(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "tcp-response inspect-delay " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "tcp-response inspect-delay " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -4435,7 +4435,7 @@
     #
     def stats_admin(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stats admin " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stats admin " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -4653,7 +4653,7 @@
     #
     def balance(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "balance " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "balance " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -4814,7 +4814,7 @@
     #
     def cookie(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "cookie " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "cookie " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -4839,7 +4839,7 @@
     #
     def default_server(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "default-server " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "default-server " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -4878,7 +4878,7 @@
     #
     def fullconn(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "fullconn " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "fullconn " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -4921,7 +4921,7 @@
     #
     def hash_type(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "hash_type " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "hash_type " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -4951,7 +4951,7 @@
     #
     def http_check_disable_on_404
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "http-check disable-on-404 " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "http-check disable-on-404 " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5003,7 +5003,7 @@
     #
     def http_check_send_state
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "http-check send-state " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "http-check send-state " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5057,7 +5057,7 @@
     #
     def option_abortonclose
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option abortonclose " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option abortonclose " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5099,7 +5099,7 @@
     #
     def option_accept_invalid_http_response
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option accept-invalid-http-response " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option accept-invalid-http-response " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5130,7 +5130,7 @@
     #
     def option_allbackups
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option allbackups " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option allbackups " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5189,7 +5189,7 @@
     #
     def option_checkcache
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option checkcache " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option checkcache " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5246,7 +5246,7 @@
     #
     def option_httpchk(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option httpchk " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option httpchk " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5278,7 +5278,7 @@
     #
     def option_ldap_check
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option ldap-check " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option ldap-check " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5305,7 +5305,7 @@
     #
     def option_log_health_checks
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option log-health-checks " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option log-health-checks " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5358,7 +5358,7 @@
     #
     def option_mysql_check(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option mysql-check " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option mysql-check " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5391,7 +5391,7 @@
     #
     def option_persist
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option persist " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option persist " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5427,7 +5427,7 @@
     #
     def option_redispatch
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option redispatch " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option redispatch " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5474,7 +5474,7 @@
     #
     def option_smtpchk(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option smtpchk " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option smtpchk " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5518,7 +5518,7 @@
     #
     def option_srvtcpka
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option srvtcpka " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option srvtcpka " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5548,7 +5548,7 @@
     #
     def option_ssl_hello_chk
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option ssl-hello-chk " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option ssl-hello-chk " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5592,7 +5592,7 @@
     #
     def option_tcp_smart_connect
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option tcp-smart-connect " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option tcp-smart-connect " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5624,7 +5624,7 @@
     #
     def option_transparent
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "option transparent " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "option transparent " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5677,7 +5677,7 @@
     #
     def persist_rdp_cookie(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "persist rdp-cookie " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "persist rdp-cookie " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5708,7 +5708,7 @@
     #
     def retries(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "retries " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "retries " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5854,7 +5854,7 @@
     #
     def source(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "source " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "source " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5912,7 +5912,7 @@
     #
     def stats_auth(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stats auth " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stats auth " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -5959,7 +5959,7 @@
     #
     def stats_enable
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stats enable " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stats enable " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -6006,7 +6006,7 @@
     #
     def stats_hide_version
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stats hide-version " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stats hide-version " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -6055,7 +6055,7 @@
     #
     def stats_realm(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stats realm " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stats realm " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -6106,7 +6106,7 @@
     #
     def stats_refresh(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stats refresh " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stats refresh " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -6156,7 +6156,7 @@
     #
     def stats_scope(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stats scope " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stats scope " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -6192,7 +6192,7 @@
     #
     def stats_show_desc(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stats show-desc " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stats show-desc " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -6216,7 +6216,7 @@
     #
     def stats_show_legends
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stats show-legends " + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stats show-legends " + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -6253,7 +6253,7 @@
     #
     def stats_show_node(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stats show-node " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stats show-node " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -6312,7 +6312,7 @@
     #
     def stats_uri(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "stats uri " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "stats uri " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -6355,7 +6355,7 @@
     #
     def timeout_check(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "timeout check " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "timeout check " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -6396,7 +6396,7 @@
     #
     def timeout_connect(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "timeout connect " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "timeout connect " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -6428,7 +6428,7 @@
     #
     def timeout_queue(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "timeout queue " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "timeout queue " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -6478,7 +6478,7 @@
     #
     def timeout_server(params = nil)
       if @name_index
-        @conf.insert(@name_index + 1, "    " + "timeout server " + params.to_s + "\n")
+        @conf.insert(@name_index + @conf.length, "    " + "timeout server " + params.to_s + "\n")
       else
         puts "no #{@proxy_type} name assigned"
         return false
@@ -6490,7 +6490,7 @@
     #
     def config
       if @name_index
-        proxy_config = @conf[0].to_s + @conf.uniq[1..@conf.length].sort.to_s + "\n"
+        proxy_config = @conf[0].to_s + @conf.uniq[1..@conf.length].to_s + "\n"
         return proxy_config
       else
         puts "#{@proxy_type} name not defined"
