@@ -6490,7 +6490,7 @@
     #
     def config
       if @name_index
-        proxy_config = @conf[0].to_s + @conf.uniq[1..@conf.length].to_s + "\n"
+        proxy_config = @conf[0].to_s + @conf.uniq[1..@conf.length].join + "\n"
         return proxy_config
       else
         puts "#{@proxy_type} name not defined"
