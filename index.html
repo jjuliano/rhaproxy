@@ -1,104 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <title>Rhaproxy by jjuliano</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Rhaproxy by jjuliano</title>
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
+    <div class="wrapper">
+      <header>
+        <h1>Rhaproxy</h1>
+        <p>Rhaproxy is a gem providing a ruby interface to HAproxy TCP/HTTP Load Balancer.</p>
+        <p class="view"><a href="https://github.com/jjuliano/rhaproxy">View the Project on GitHub <small>jjuliano/rhaproxy</small></a></p>
+        <ul>
+          <li><a href="https://github.com/jjuliano/rhaproxy/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/jjuliano/rhaproxy/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/jjuliano/rhaproxy">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="rhaproxy---haproxy-load-balancer-for-ruby" class="anchor" href="#rhaproxy---haproxy-load-balancer-for-ruby" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rhaproxy - HAproxy Load Balancer for Ruby</h1>
 
-        <header>
-          <h1>Rhaproxy</h1>
-          <h2>Rhaproxy is a gem providing a ruby interface to HAproxy TCP/HTTP Load Balancer.</h2>
-        </header>
+<p>Rhaproxy is a gem providing a ruby interface to HAproxy TCP/HTTP Load Balancer.</p>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/jjuliano/rhaproxy/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/jjuliano/rhaproxy/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/jjuliano/rhaproxy" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+<p>To install, type 'gem install rhaproxy'</p>
 
-        <hr>
+<h3>
+<a id="why-rhaproxy" class="anchor" href="#why-rhaproxy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why RHAProxy?</h3>
 
-        <section id="main_content">
-          <p><code>rhaproxy</code> is a gem providing a ruby interface to HAproxy TCP/HTTP Load Balancer.</p>
+<p>RHAProxy creates simple and small development tools that help you design,
+develop, deploy cloud infrastractures for your enterprise software systems.</p>
 
-<p>To install, type <code>'gem install rhaproxy'</code></p>
+<h4>
+<a id="rhaproxy-pro-a-commercial-supported-version-of-rhaproxy" class="anchor" href="#rhaproxy-pro-a-commercial-supported-version-of-rhaproxy" aria-hidden="true"><span class="octicon octicon-link"></span></a>RHAProxy Pro: A Commercial, Supported Version of RHAProxy</h4>
 
-<h3>Usage</h3>
+<p>RHAProxy Pro is a collection of useful functionality for the open source RHAProxy library with priority support via Remote access or Skype from the author, new features in-demand, upgrades and lots more.</p>
 
-<pre><code>require 'rubygems'
-require 'rhaproxy'
+<p>Sales of RHAProxy Pro also benefit the community by ensuring that RHAProxy itself will remain well supported for the foreseeable future.</p>
 
-global = RhaproxyGlobal.new
-global.daemon = true
-global.maxconn = 256
+<h4>
+<a id="licensing" class="anchor" href="#licensing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Licensing</h4>
 
-defaults = RhaproxyDefaults.new
-defaults.mode("http")
-defaults.timeout_connect("5000ms")
-defaults.timeout_client("50000ms")
-defaults.timeout_server("50000ms")
+<p>RHAProxy is available under the terms of the GNU LGPLv3 license.</p>
 
-frontend = RhaproxyFrontend.new
-frontend.name("http-in")
-frontend.default_backend("servers")
+<p>In addition to its useful functionality, buying RHAProxy Pro grants your organization a RHAProxy Commercial License instead of the GNU LGPL, avoiding any legal issues your lawyers might raise. Please contact <a href="mailto:joelbryan.juliano@gmail.com">joelbryan.juliano@gmail.com</a> for further detail on licensing including options for embedding RHAProxy Pro in your own products.</p>
 
-backend = RhaproxyBackend.new
-backend.name("servers")
-backend.server("server1 127.0.0.1:8000 maxconn 32")
+<h4>
+<a id="buy-rhaproxy-pro" class="anchor" href="#buy-rhaproxy-pro" aria-hidden="true"><span class="octicon octicon-link"></span></a>Buy RHAProxy Pro</h4>
 
-config = Array.new
-config.push([global.config])
-config.push([defaults.config])
-config.push([frontend.config])
-config.push([backend.config])
+<p>Contact me via <a href="mailto:joelbryan.juliano@gmail.com">joelbryan.juliano@gmail.com</a>, and Pay via Paypal: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GFG3UVMX2FDEY">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GFG3UVMX2FDEY</a></p>
 
-haproxy_conf_file = File.new("haproxy.conf", "w+")
-haproxy_conf_file.puts(config)
-haproxy_conf_file.close
-</code></pre>
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage:</h3>
 
-<h3>Configuration Generation</h3>
+<div class="highlight highlight-ruby"><pre>      <span class="pl-k">require</span> <span class="pl-s1"><span class="pl-pds">'</span>rubygems<span class="pl-pds">'</span></span>
+      <span class="pl-k">require</span> <span class="pl-s1"><span class="pl-pds">'</span>rhaproxy<span class="pl-pds">'</span></span>
 
-<p>And it will generate the <code>haproxy.conf</code> file which includes the following
-configurations:</p>
+      global <span class="pl-k">=</span> <span class="pl-s3">RhaproxyGlobal</span>.<span class="pl-k">new</span>
+      global.daemon <span class="pl-k">=</span> <span class="pl-c1">true</span>
+      global.maxconn <span class="pl-k">=</span> <span class="pl-c1">256</span>
 
-<pre><code>global
-  daemon
-  maxconn 256
+      defaults <span class="pl-k">=</span> <span class="pl-s3">RhaproxyDefaults</span>.<span class="pl-k">new</span>
+      defaults.mode(<span class="pl-s1"><span class="pl-pds">"</span>http<span class="pl-pds">"</span></span>)
+      defaults.timeout_connect(<span class="pl-s1"><span class="pl-pds">"</span>5000ms<span class="pl-pds">"</span></span>)
+      defaults.timeout_client(<span class="pl-s1"><span class="pl-pds">"</span>50000ms<span class="pl-pds">"</span></span>)
+      defaults.timeout_server(<span class="pl-s1"><span class="pl-pds">"</span>50000ms<span class="pl-pds">"</span></span>)
 
-defaults
-  mode http
-  timeout client 50000ms
-  timeout connect 5000ms
-  timeout server 50000ms
+      frontend <span class="pl-k">=</span> <span class="pl-s3">RhaproxyFrontend</span>.<span class="pl-k">new</span>
+      frontend.name(<span class="pl-s1"><span class="pl-pds">"</span>http-in<span class="pl-pds">"</span></span>)
+      frontend.default_backend(<span class="pl-s1"><span class="pl-pds">"</span>servers<span class="pl-pds">"</span></span>)
 
-frontend http-in
-  default_backend servers
+      backend <span class="pl-k">=</span> <span class="pl-s3">RhaproxyBackend</span>.<span class="pl-k">new</span>
+      backend.name(<span class="pl-s1"><span class="pl-pds">"</span>servers<span class="pl-pds">"</span></span>)
+      backend.server(<span class="pl-s1"><span class="pl-pds">"</span>server1 127.0.0.1:8000 maxconn 32<span class="pl-pds">"</span></span>)
 
-backend servers
-  server server1 127.0.0.1:8000 maxconn 32
-</code></pre>
-        </section>
+      config <span class="pl-k">=</span> <span class="pl-s3">Array</span>.<span class="pl-k">new</span>
+      config.push([global.config])
+      config.push([defaults.config])
+      config.push([frontend.config])
+      config.push([backend.config])
 
-        <footer>
-          Rhaproxy is maintained by <a href="https://github.com/jjuliano">jjuliano</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+      haproxy_conf_file <span class="pl-k">=</span> <span class="pl-s3">File</span>.<span class="pl-k">new</span>(<span class="pl-s1"><span class="pl-pds">"</span>haproxy.conf<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>w+<span class="pl-pds">"</span></span>)
+      haproxy_conf_file.puts(config)
+      haproxy_conf_file.close</pre></div>
 
-        
-      </div>
+<p>haproxy.conf:</p>
+
+<div class="highlight highlight-ruby"><pre>      global
+        daemon
+        maxconn <span class="pl-c1">256</span>
+
+      defaults
+        mode http
+        timeout client 50000ms
+        timeout connect 5000ms
+        timeout server 50000ms
+
+      frontend http<span class="pl-k">-</span><span class="pl-k">in</span>
+        default_backend servers
+
+      backend servers
+        server server1 <span class="pl-c1">127.0</span>.<span class="pl-c1">0.1</span>:<span class="pl-c1">8000</span> maxconn <span class="pl-c1">32</span></pre></div>
+
+<h3>
+<a id="donations" class="anchor" href="#donations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Donations</h3>
+
+<p>Please support independent cloud computing toolkits, also money donated to the project will benefit the community by ensuring that RHAProxy itself will remain well supported for the foreseeable future. To Donate, please visit: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=KT9CY4T7BYDM4">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=KT9CY4T7BYDM4</a></p>
+      </section>
     </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/jjuliano">jjuliano</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-57800038-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
