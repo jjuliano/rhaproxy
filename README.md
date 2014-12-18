@@ -5,23 +5,23 @@ Rhaproxy is a gem providing a ruby interface to HAproxy TCP/HTTP Load Balancer.
 
 To install, type 'gem install rhaproxy'
 
-### Why RHaProxy?
+### Why RHAProxy?
 
-RHaProxy creates simple and small development tools that help you design,
+RHAProxy creates simple and small development tools that help you design,
 develop, deploy cloud infrastractures for your enterprise software systems.
 
-#### RHaProxy Pro: A Commercial, Supported Version of RHaProxy
-RHaProxy Pro is a collection of useful functionality for the open source RHaProxy library with priority support via Remote access or Skype from the author, new features in-demand, upgrades and lots more.
+#### RHAProxy Pro: A Commercial, Supported Version of RHAProxy
+RHAProxy Pro is a collection of useful functionality for the open source RHAProxy library with priority support via Remote access or Skype from the author, new features in-demand, upgrades and lots more.
 
-Sales of RHaProxy Pro also benefit the community by ensuring that RHaProxy itself will remain well supported for the foreseeable future.
+Sales of RHAProxy Pro also benefit the community by ensuring that RHAProxy itself will remain well supported for the foreseeable future.
 
 #### Licensing
-RHaProxy is available under the terms of the GNU LGPLv3 license.
+RHAProxy is available under the terms of the GNU LGPLv3 license.
 
-In addition to its useful functionality, buying RHaProxy Pro grants your organization a RHaProxy Commercial License instead of the GNU LGPL, avoiding any legal issues your lawyers might raise. Please contact joelbryan.juliano@gmail.com for further detail on licensing including options for embedding RHaProxy Pro in your own products.
+In addition to its useful functionality, buying RHAProxy Pro grants your organization a RHAProxy Commercial License instead of the GNU LGPL, avoiding any legal issues your lawyers might raise. Please contact joelbryan.juliano@gmail.com for further detail on licensing including options for embedding RHAProxy Pro in your own products.
 
-#### Buy RHaProxy Pro
-Contact me via joelbryan.juliano@gmail.com, and Pay via Paypal: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=72VVRU869SUB6
+#### Buy RHAProxy Pro
+Contact me via joelbryan.juliano@gmail.com, and Pay via Paypal: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GFG3UVMX2FDEY
 
 ### Usage:
 
@@ -60,7 +60,7 @@ Contact me via joelbryan.juliano@gmail.com, and Pay via Paypal: https://www.payp
 
 haproxy.conf:
 
-```yaml
+```ruby
       global
         daemon
         maxconn 256
@@ -78,6 +78,6 @@ haproxy.conf:
         server server1 127.0.0.1:8000 maxconn 32
 ```
 
-Donations
+### Donations
 
-Please support independent cloud computing toolkits, also money donated to the project will benefit the community by ensuring that RHaProxy itself will remain well supported for the foreseeable future. To Donate, please visit: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KT9CY4T7BYDM4
+Please support independent cloud computing toolkits, also money donated to the project will benefit the community by ensuring that RHAProxy itself will remain well supported for the foreseeable future. To Donate, please visit: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KT9CY4T7BYDM4
